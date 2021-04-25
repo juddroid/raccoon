@@ -14,12 +14,14 @@ export default Header;
 
 const HeaderStyle = styled.header`
   h1 {
+    font-size: 1.98818rem;
     font-family: Montserrat, sans-serif;
     font-weight: 900;
-    text-rendering: optimizeLegibility;
     color: #fff;
+    line-height: 2.625rem;
   }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2.625rem;
 `;

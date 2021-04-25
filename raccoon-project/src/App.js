@@ -22,11 +22,5 @@ const AppStyle = styled.div`
   padding: 2.625rem 1.3125rem;
   font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 400;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font: 100%/1.75 'Merriweather', 'Georgia', serif;
 `;

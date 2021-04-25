@@ -7,7 +7,7 @@ const Aside = () => {
         src="https://juddroid.github.io/assets/img/favicons/ms-icon-310x310.png"
         alt="aside"
       />
-      <p>Personal blog by Dan Abramov. I explain with words and code.</p>
+      <p>Personal blog by Raccoon. I explain with words and code.</p>
     </AsideStyle>
   );
 };
@@ -21,7 +21,7 @@ const AsideStyle = styled.aside`
 
   img {
     margin-right: 0.875rem;
-    margin-bottom: 0;
+    margin-bottom: 1.75rem;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -31,5 +31,6 @@ const AsideStyle = styled.aside`
   p {
     color: #fff;
     max-width: 310px;
+    margin-bottom: 1.75rem;
   }
 `;

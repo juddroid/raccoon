@@ -12,6 +12,8 @@ const Header = () => {
 export default Header;
 
 const HeaderStyle = styled.div`
+  color: #fff;
+
   h3 {
     font-family: Montserrat, sans-serif;
     font-weight: 900;
@@ -19,7 +21,10 @@ const HeaderStyle = styled.div`
     margin-bottom: 0.4375rem;
     margin-top: 3.5rem;
     color: #ffa7c4;
+    line-height: 1.1;
   }
 
-  color: #fff;
+  small {
+    font-size: 80%;
+  }
 `;

@@ -14,4 +14,8 @@ export default Article;
 
 const ArticleStyle = styled.article`
   color: #fff;
+
+  p {
+    margin-bottom: 1.75rem;
+  }
 `;
