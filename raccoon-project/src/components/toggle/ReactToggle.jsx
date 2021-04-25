@@ -1,13 +1,20 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import ReactToggleThumb from './ReactToggleThumb';
 import ReactToggleTrack from './ReactToggleTrack';
 
 const ReactToggle = () => {
+  const [modePosition, setModePosition] = useState(0);
+
+  const onToggleMode = () => {
+    if (modePosition === 0) return setModePosition(26);
+    setModePosition(0);
+  };
   return (
-    <ReactToggleStyle>
+    <ReactToggleStyle onClick={onToggleMode}>
       <ReactToggleTrack />
       <ReactToggleTrackCheck />
-      <ReactToggleThumb />
+      <ReactToggleThumb {...{ modePosition }} />
     </ReactToggleStyle>
   );
 };

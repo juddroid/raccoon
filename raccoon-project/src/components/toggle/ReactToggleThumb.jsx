@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const ReactToggleThumb = () => {
-  return <ReactToggleThumbStyle />;
+const ReactToggleThumb = ({ modePosition }) => {
+  return <ReactToggleThumbStyle {...{ modePosition }} />;
 };
 
 export default ReactToggleThumb;
@@ -16,6 +16,5 @@ const ReactToggleThumbStyle = styled.div`
   background-color: #fafafa;
   box-sizing: border-box;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-  transform: translateX(0);
-  transform: translateX(26px);
+  transform: ${({ modePosition }) => `translateX(${modePosition}px)`};
 `;
