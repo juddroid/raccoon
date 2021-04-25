@@ -1,10 +1,13 @@
 import styled from 'styled-components';
+import ReactToggleThumb from './ReactToggleThumb';
+import ReactToggleTrack from './ReactToggleTrack';
 
 const ReactToggle = () => {
   return (
     <ReactToggleStyle>
       <ReactToggleTrack />
       <ReactToggleTrackCheck />
+      <ReactToggleThumb />
     </ReactToggleStyle>
   );
 };
@@ -21,17 +24,8 @@ const ReactToggleStyle = styled.div`
   padding: 0;
 `;
 
-const ReactToggleTrack = styled.div`
-  width: 50px;
-  height: 24px;
-  padding: 0;
-  border-radius: 30px;
-  background-color: #0f1114;
-  transition: all 0.2s ease;
-`;
-
 const ReactToggleTrackCheck = styled.div`
-  border: 1px solid white;
+  border: 1px solid #fff;
   position: absolute;
   width: 17px;
   height: 17px;
