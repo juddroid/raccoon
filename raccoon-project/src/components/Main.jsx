@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import Article from './arcticle/Article';
 
-const Main = () => {
+const Main = ({ data }) => {
   return (
     <MainStyle>
-      <Article />
-      <Article />
-      <Article />
+      {data.map((article) => (
+        <Article {...{ article }} />
+      ))}
     </MainStyle>
   );
 };

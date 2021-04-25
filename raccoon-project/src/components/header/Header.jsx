@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { TITLE } from '../const';
 import ReactToggle from '../toggle/ReactToggle';
 
 const Header = () => {
   return (
     <HeaderStyle>
-      <h1>Header</h1>
+      <h1>{TITLE}</h1>
       <ReactToggle />
     </HeaderStyle>
   );

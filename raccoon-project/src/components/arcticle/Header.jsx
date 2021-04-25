@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-const Header = () => {
+const Header = ({ article }) => {
+  console.log(article);
   return (
     <HeaderStyle>
-      <h3>Article</h3>
+      <h3>{article.title}</h3>
       <small>small</small>
     </HeaderStyle>
   );

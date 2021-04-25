@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import Header from './Header';
 
-const Article = () => {
+const Article = ({ article }) => {
   return (
     <ArticleStyle>
-      <Header />
+      <Header {...{ article }} />
       <p>article p tag</p>
     </ArticleStyle>
   );
