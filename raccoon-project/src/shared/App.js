@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Aside from './components/aside/Aside';
-import Header from './components/header/Header';
-import Main from './components/Main';
-import firebase from './firebase';
+import Aside from '../components/aside/Aside';
+import Header from '../components/header/Header';
+import Main from '../components/Main';
+import firebase from '../firebase';
 
 function App() {
   const [data, setData] = useState([]);
