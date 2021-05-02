@@ -5,7 +5,7 @@ const Main = ({ data }) => {
   return (
     <MainStyle>
       {data.map((article) => (
-        <Article {...{ article }} />
+        <Article article={article} key={article.id} />
       ))}
     </MainStyle>
   );
@@ -13,4 +13,4 @@ const Main = ({ data }) => {
 
 export default Main;
 
-const MainStyle = styled.div``;
+const MainStyle = styled.main``;

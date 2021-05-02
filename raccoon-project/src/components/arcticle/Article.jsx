@@ -5,7 +5,7 @@ const Article = ({ article }) => {
   return (
     <ArticleStyle>
       <Header {...{ article }} />
-      <p>article p tag</p>
+      <p>{article.subContent}</p>
     </ArticleStyle>
   );
 };
