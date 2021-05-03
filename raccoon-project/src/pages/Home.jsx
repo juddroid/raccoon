@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
-
 import styled from 'styled-components';
-
-import Aside from '../components/aside/Aside';
+import AsideMain from '../components/aside/AsideMain';
 import Header from '../components/header/Header';
 import Main from '../components/Main';
 import firebase from '../firebase';
@@ -11,28 +9,12 @@ const Home = () => {
   const [data, setData] = useState([]);
 
   const articleRef = firebase.database().ref('article');
-  const small = new Date();
-  console.log(small);
-
-  // useEffect(() => {
-  //   const newArticle = {
-  //     title: 'Algorithm',
-  //     contents: 'about counting sort',
-  //     small: `${small}`,
-  //   };
-  //   articleRef.push(newArticle);
-  // }, []);
-
-  // useEffect(() => {
-  //   articleRef.update();
-  // }, []);
 
   useEffect(() => {
     articleRef.on('value', (snapshot) => {
       const article = snapshot.val();
       const articleList = [];
 
-      console.log(article);
       for (let id in article) {
         articleList.push({ ...article[id], id });
       }
@@ -43,13 +25,10 @@ const Home = () => {
 
   if (!data) return null;
 
-  console.log(data);
-
   return (
     <HomeStyle>
       <Header />
-      <Aside />
-      <a href="/pages/post">Post</a>
+      <AsideMain />
       <Main {...{ data }} />
     </HomeStyle>
   );
@@ -58,6 +37,7 @@ const Home = () => {
 export default Home;
 
 const HomeStyle = styled.div`
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   max-width: 42rem;

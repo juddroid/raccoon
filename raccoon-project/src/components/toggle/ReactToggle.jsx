@@ -29,6 +29,7 @@ const ReactToggleStyle = styled.div`
   background-color: transparent;
   border: 0;
   padding: 0;
+  margin-left: 40px;
 `;
 
 const ReactToggleTrackCheck = styled.div`

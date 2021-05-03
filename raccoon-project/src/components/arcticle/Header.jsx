@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Header = ({ article }) => {
-  console.log(article);
   const fileName = article.title;
   return (
     <HeaderStyle>
