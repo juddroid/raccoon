@@ -31,5 +31,6 @@ const AppStyle = styled.div`
 
 const AsideStyle = styled.div`
   position: relative;
+  top: 270px;
   left: -30px;
 `;

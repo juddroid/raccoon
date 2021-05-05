@@ -16,7 +16,7 @@ import { StyledButton } from '../components/style/StyledButton';
 
 const Post = () => {
   const [title, setTitle] = useState('');
-  const [subContent, setSubContent] = useState('');
+  const [subTitle, setSubTitle] = useState('');
 
   const articleRef = firebase.database().ref('article');
   const editorRef = useRef();
@@ -25,7 +25,7 @@ const Post = () => {
     const markdownContent = editorInstance.getMarkdown();
     const newArticle = {
       title: `${title}`,
-      subContent: `${subContent}`,
+      subTitle: `${subTitle}`,
       content: `${markdownContent}`,
     };
     articleRef.push(newArticle);
@@ -34,8 +34,8 @@ const Post = () => {
   const handleChangeInputTitle = (e) => {
     setTitle(e.target.value);
   };
-  const handleChangeInputSubContent = (e) => {
-    setSubContent(e.target.value);
+  const handleChangeInputsubTitle = (e) => {
+    setSubTitle(e.target.value);
   };
 
   return (
@@ -52,9 +52,9 @@ const Post = () => {
         <PostBoxStyle>
           <PostBox>SubTitle</PostBox>
           <PostInputStyle
-            placeholder="SubContent"
-            value={subContent}
-            onChange={handleChangeInputSubContent}
+            placeholder="subTitle"
+            value={subTitle}
+            onChange={handleChangeInputsubTitle}
           />
         </PostBoxStyle>
       </PostBoxWrapper>

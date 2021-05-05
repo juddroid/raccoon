@@ -20,7 +20,6 @@ export default AsideMain;
 const AsideMainStyle = styled.aside`
   display: flex;
   align-items: center;
-  margin-bottom: 3.5rem;
 
   p {
     color: #fff;

@@ -8,18 +8,18 @@ const AsideSticky = () => {
       <Link to="/pages/post">
         <StyledButton>Post</StyledButton>
       </Link>
-      <a href="/pages/post">
+      <Link to="/pages/post">
         <StyledButton>Algorithm</StyledButton>
-      </a>
-      <a href="/pages/post">
+      </Link>
+      <Link to="/pages/post">
         <StyledButton>Think</StyledButton>
-      </a>
-      <a href="/pages/post">
+      </Link>
+      <Link to="/pages/post">
         <StyledButton>Project</StyledButton>
-      </a>
-      <a href="/pages/post">
+      </Link>
+      <Link to="/pages/post">
         <StyledButton>About</StyledButton>
-      </a>
+      </Link>
     </AsideStickyStyle>
   );
 };
@@ -32,12 +32,11 @@ const AsideStickyStyle = styled.div`
   border-radius: 10px;
   color: #fff;
   height: 100px;
-  top: 310px;
   width: 100%;
-  height: 500px;
+  height: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
   box-sizing: border-box;
 `;
