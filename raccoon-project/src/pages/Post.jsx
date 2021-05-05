@@ -22,11 +22,11 @@ const Post = () => {
   const editorRef = useRef();
   const handleClickPostButton = () => {
     const editorInstance = editorRef.current.getInstance();
-    const markdownContnent = editorInstance.getMarkdown();
+    const markdownContent = editorInstance.getMarkdown();
     const newArticle = {
       title: `${title}`,
       subContent: `${subContent}`,
-      content: `${markdownContnent}`,
+      content: `${markdownContent}`,
     };
     articleRef.push(newArticle);
     window.history.back();
