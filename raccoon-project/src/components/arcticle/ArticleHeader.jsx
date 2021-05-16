@@ -1,27 +1,30 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Small from '../small/Small';
 
 const ArticleHeader = ({ article }) => {
   const fileName = article.title;
   return (
-    <ArticleHeaderStyle>
+    <HeaderStyle>
       <Link
         to={{
           pathname: `pages/post/${fileName}`,
-          state: { content: `${article.content}` },
+          state: {
+            id: `${article.id}`,
+          },
         }}
       >
         <h3>{article.title}</h3>
       </Link>
 
-      <small>small</small>
-    </ArticleHeaderStyle>
+      <Small date={article.date} />
+    </HeaderStyle>
   );
 };
 
 export default ArticleHeader;
 
-const ArticleHeaderStyle = styled.div`
+const HeaderStyle = styled.div`
   color: #fff;
 
   h3 {

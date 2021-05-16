@@ -1,10 +1,29 @@
-import { Viewer } from '@toast-ui/react-editor';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import DetailArticleHeader from './DetailArticleHeader';
+import firebase from '../../firebase';
+import DetailViewer from '../viewer/DetailViewer';
 
 const DetailArticle = ({ location }) => {
+  const [detailArticle, setDetailArticle] = useState(null);
+
+  const articleRef = firebase.database().ref('article');
+
+  useEffect(() => {
+    articleRef.on('value', (snapshot) => {
+      const article = snapshot.val();
+      const currentArticle = article[location.state.id];
+      setDetailArticle(currentArticle);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (!detailArticle) return null;
+
   return (
     <DetailArticleStyle>
-      <Viewer initialValue={location.state.content} />
+      <DetailArticleHeader {...{ detailArticle }} />
+      <DetailViewer {...{ detailArticle }} />
     </DetailArticleStyle>
   );
 };
@@ -13,51 +32,4 @@ export default DetailArticle;
 
 const DetailArticleStyle = styled.div`
   margin-top: 3.5rem;
-
-  .tui-editor-contents p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  ol,
-  li,
-  hr {
-    color: #fff;
-    line-height: 2;
-    margin: 20px 0;
-  }
-
-  .tui-editor-contents h1 {
-    font-size: 28px;
-  }
-  .tui-editor-contents p {
-    font-size: 20px;
-  }
-  .tui-editor-contents li,
-  .tui-editor-contents ul {
-    font-size: 20px;
-
-    ::before {
-      color: #fff;
-      line-height: 2;
-    }
-  }
-
-  .tui-editor-contents code {
-    color: #fff;
-    background-color: #363c48;
-    padding: 2px 3px;
-    letter-spacing: -0.3px;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-
-  .tui-editor-contents pre {
-    margin: 2px 0 8px;
-    padding: 18px;
-    background-color: #363c48;
-    border-radius: 5px;
-  }
 `;

@@ -14,7 +14,6 @@ import 'highlight.js/styles/github.css';
 import 'tui-color-picker/dist/tui-color-picker.css';
 import { StyledButton } from '../components/style/StyledButton';
 import { v1 as uuidv1 } from 'uuid';
-import { getFormatDate } from '../util';
 
 const Post = () => {
   const [title, setTitle] = useState('');
@@ -29,7 +28,7 @@ const Post = () => {
 
     const newArticle = {
       id: uuidv1(),
-      date: getFormatDate(new Date()),
+      date: `${new Date()}`,
       title: `${title}`,
       subTitle: `${subTitle}`,
       content: `${markdownContent}`,

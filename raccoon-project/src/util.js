@@ -6,3 +6,8 @@ export const getFormatDate = (date) => {
   day = day >= 10 ? day : '0' + day; //day 두자리로 저장
   return year + month + day;
 };
+
+export const getSmallDate = (date) => {
+  const smallDateList = date.toString().split(' ');
+  return `${smallDateList[1]} ${smallDateList[2]}, ${smallDateList[3]}`;
+};
