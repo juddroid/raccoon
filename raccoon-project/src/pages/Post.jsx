@@ -93,7 +93,7 @@ const PostStyle = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 3.5rem 0;
-  width: 100%;
+  width: 200%;
 `;
 
 const EditorStyle = styled.div``;

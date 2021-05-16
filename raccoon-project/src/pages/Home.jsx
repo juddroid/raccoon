@@ -22,7 +22,7 @@ export default Home;
 
 const HomeStyle = styled.div`
   position: relative;
-  width: 86rem;
+  width: 43rem;
   padding: 2.625rem 1.3125rem;
   font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 400;

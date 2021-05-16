@@ -19,9 +19,8 @@ export default App;
 const AppStyle = styled.div`
   position: relative;
   display: flex;
-  margin-left: 200px;
-  margin-right: auto;
-  max-width: 86rem;
+  justify-content: center;
+
   padding: 2.625rem 1.3125rem;
   font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 400;
