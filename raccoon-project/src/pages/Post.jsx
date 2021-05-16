@@ -13,6 +13,8 @@ import 'tui-chart/dist/tui-chart.css';
 import 'highlight.js/styles/github.css';
 import 'tui-color-picker/dist/tui-color-picker.css';
 import { StyledButton } from '../components/style/StyledButton';
+import { v1 as uuidv1 } from 'uuid';
+import { getFormatDate } from '../util';
 
 const Post = () => {
   const [title, setTitle] = useState('');
@@ -20,10 +22,14 @@ const Post = () => {
 
   const articleRef = firebase.database().ref('article');
   const editorRef = useRef();
+
   const handleClickPostButton = () => {
     const editorInstance = editorRef.current.getInstance();
     const markdownContent = editorInstance.getMarkdown();
+
     const newArticle = {
+      id: uuidv1(),
+      date: getFormatDate(new Date()),
       title: `${title}`,
       subTitle: `${subTitle}`,
       content: `${markdownContent}`,
@@ -60,7 +66,7 @@ const Post = () => {
       </PostBoxWrapper>
       <EditorStyle>
         <Editor
-          initialValue="hello react editor world!"
+          initialValue=""
           previewStyle="vertical"
           height="1000px"
           initialEditType="markdown"
@@ -86,12 +92,11 @@ const PostStyle = styled.div`
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding: 2.625rem 1.3125rem;
+  padding: 3.5rem 0;
+  width: 100%;
 `;
 
-const EditorStyle = styled.div`
-  width: 200%;
-`;
+const EditorStyle = styled.div``;
 
 const PostBoxWrapper = styled.div``;
 
@@ -112,7 +117,6 @@ const PostBox = styled.div`
 const PostBoxStyle = styled.div`
   margin: 5px 0;
   display: flex;
-  width: 200%;
 `;
 
 const PostInputStyle = styled.input`

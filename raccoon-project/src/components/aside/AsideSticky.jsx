@@ -29,6 +29,7 @@ export default AsideSticky;
 const AsideStickyStyle = styled.div`
   position: sticky;
   border: 1px solid #ffa7c4;
+  top: 100px;
   border-radius: 10px;
   color: #fff;
   height: 100px;

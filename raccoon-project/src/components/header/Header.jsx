@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { TITLE } from '../const';
 import ReactToggle from '../toggle/ReactToggle';
@@ -5,7 +6,11 @@ import ReactToggle from '../toggle/ReactToggle';
 const Header = () => {
   return (
     <HeaderStyle>
-      <h1>{TITLE}</h1>
+      <HeaderTitleStyle>
+        <Link to="/">
+          <h1>{TITLE}</h1>
+        </Link>
+      </HeaderTitleStyle>
       <ReactToggle />
     </HeaderStyle>
   );
@@ -25,4 +30,10 @@ const HeaderStyle = styled.header`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.625rem;
+`;
+
+const HeaderTitleStyle = styled.div`
+  a {
+    text-decoration: none;
+  }
 `;

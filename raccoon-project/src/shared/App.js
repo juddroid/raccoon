@@ -1,7 +1,7 @@
 import { Route } from 'react-router';
 import styled from 'styled-components';
 import AsideSticky from '../components/aside/AsideSticky';
-import { Home, Post } from '../pages';
+import { Home } from '../pages';
 
 function App() {
   return (
@@ -9,8 +9,7 @@ function App() {
       <AsideStyle>
         <AsideSticky />
       </AsideStyle>
-      <Route exact path="/" component={Home} />
-      <Route path="/pages/post" component={Post} />
+      <Route path="/" component={Home} />
     </AppStyle>
   );
 }
@@ -20,9 +19,9 @@ export default App;
 const AppStyle = styled.div`
   position: relative;
   display: flex;
-  margin-left: auto;
+  margin-left: 200px;
   margin-right: auto;
-  max-width: 42rem;
+  max-width: 86rem;
   padding: 2.625rem 1.3125rem;
   font-family: 'Merriweather', 'Georgia', serif;
   font-weight: 400;

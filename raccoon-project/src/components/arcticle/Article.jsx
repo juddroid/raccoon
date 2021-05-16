@@ -1,25 +1,11 @@
-import { Viewer } from '@toast-ui/react-editor';
-import { useRef } from 'react';
 import styled from 'styled-components';
-import Header from './Header';
+import ArticleHeader from './ArticleHeader';
 
 const Article = ({ article }) => {
-  const viewerRef = useRef();
-
-  const setArticleContent = (content) => {
-    const viewerInstance = viewerRef.current.getInstance();
-    const markdownContent = viewerInstance.setMarkdown(content);
-    return markdownContent;
-  };
-
   return (
     <ArticleStyle>
-      <Header {...{ article }} />
+      <ArticleHeader {...{ article }} />
       <p>{article.subTitle}</p>
-      {/* <Viewer
-        ref={viewerRef}
-        initialValue={setArticleContent(article.subTitle)}
-      /> */}
     </ArticleStyle>
   );
 };
