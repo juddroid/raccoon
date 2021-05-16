@@ -5,19 +5,16 @@ import { StyledButton } from '../style/StyledButton';
 const AsideSticky = () => {
   return (
     <AsideStickyStyle>
-      <Link to="/pages/post">
-        <StyledButton>Post</StyledButton>
-      </Link>
-      <Link to="/pages/post">
+      <Link to="/">
         <StyledButton>Algorithm</StyledButton>
       </Link>
-      <Link to="/pages/post">
+      <Link to="/">
         <StyledButton>Think</StyledButton>
       </Link>
-      <Link to="/pages/post">
+      <Link to="/">
         <StyledButton>Project</StyledButton>
       </Link>
-      <Link to="/pages/post">
+      <Link to="/">
         <StyledButton>About</StyledButton>
       </Link>
     </AsideStickyStyle>

@@ -1,12 +1,15 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { ASIDE_INSTAGRAM, ASIDE_PROFILE } from '../const';
 
 const AsideMain = () => {
   return (
     <AsideMainStyle>
-      <ProfileImageDiv>
-        <ProfileImageStyle src={ASIDE_PROFILE} alt="aside" />
-      </ProfileImageDiv>
+      <Link to="/pages/post">
+        <ProfileImageDiv>
+          <ProfileImageStyle src={ASIDE_PROFILE} alt="aside" />
+        </ProfileImageDiv>
+      </Link>
       <p>
         Personal blog by <a href={ASIDE_INSTAGRAM}>Raccoon</a>. <br />I explain
         with words and code.
